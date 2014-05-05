@@ -1,3 +1,5 @@
+load('lib/frequency.js');
+
 function words_of_length_frequency(text, min_word_length, max_word_length) {
   var words = text.split(' ');
   
