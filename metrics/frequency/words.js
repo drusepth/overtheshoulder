@@ -14,34 +14,44 @@ function words_of_length_frequency(text, min_word_length, max_word_length) {
 }
 
 function preposition_frequency(text) {
-
+  var prepositions = ["about", "across", "against", "along", "around", "at", "behind",
+                      "beside", "besides", "by", "despite", "down", "during", "for", "from",
+                      "in", "inside", "into", "near", "of", "off", "on", "onto", "over",
+                      "through", "to", "toward", "with", "within", "without"];
+  return frequency_of_words_in_text(prepositions, text);
 }
 
 function pronoun_frequency(text) {
-  
+  var pronouns = ["I", "you", "he", "me", "her", "him", "my", "mine", "her",
+                  "hers", "his", "myself", "himself", "herself", "anything",
+                  "everything", "anyone", "everyone", "ones", "such", "it",
+                  "we", "they", "us", "them", "our", "ours", "their", "theirs",
+                  "itself", "ourselves", "themselves", "something", "nothing", "someone"];
+  return frequency_of_words_in_text(pronouns, text);  
 }
 
 function determiner_frequency(text) {
-
+  var determiners = ["the", "some", "this", "that", "every", "all", "both", "one",
+                     "first", "other", "next", "many", "much", "more", "most", 
+                     "several", "no", "a", "an", "any", "each", "half", "twice",
+                     "two", "second", "another", "last", "few", "little", "less",
+                     "least", "own"];
+  return frequency_of_words_in_text(determiners, text);
 }
 
 function conjunction_frequency(text) {
-
+  var conjunctions = ["and", "but", "after", "when", "as", "because", "if", "what", "where",
+                      "which", "how", "than", "or", "so", "before", "since", "while", 
+                      "although", "though", "who", "whose"];
+  return frequency_of_words_in_text(conjunctions, text);
 }
 
 function link_frequency(text) {
-
-}
-
-function prefix_frequency(text) {
-
-}
-
-function suffix_frequency(text) {
-
+  var prefixes = ["http://", "https://", "www."];
+  return frequency_of_prefix_in_text(prefixes, text);
 }
 
 function characters_per_word(text) {
-
+  return text.length / text.split(' ').length;
 }
 
