@@ -29,5 +29,4 @@ function punctuation_frequency(text) {
 function special_character_frequency(text) {
   var special = ['$', '^', '#', '@', '^', '%', '~'];
   return frequency_of_chars_in_string(special, text) / text.length;
-
 }
