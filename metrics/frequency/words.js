@@ -1,8 +1,9 @@
+load('lib/structure.js');
 load('lib/frequency.js');
 
 function words_of_length_frequency(text, min_word_length, max_word_length) {
-  var words = text.split(' ');
-  
+  var words = split_text_into_words(text);
+
   if (words.length == 0) return 0;
   
   var match_count = 0;
@@ -54,6 +55,6 @@ function link_frequency(text) {
 }
 
 function characters_per_word(text) {
-  return text.length / text.split(' ').length;
+  return split_text_into_characters(text).length / split_text_into_words(text).length;
 }
 
